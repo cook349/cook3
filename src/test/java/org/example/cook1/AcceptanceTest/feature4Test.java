@@ -5,13 +5,12 @@ import org.example.cook1.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class feature4 {
+public class feature4Test {
   private InventoryMang inventoryManager = new InventoryMang();
   private String currentIngredientName;
   private Supplie selectedSupplier;

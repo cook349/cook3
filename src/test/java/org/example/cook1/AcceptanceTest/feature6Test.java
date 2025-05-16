@@ -9,8 +9,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-public class feature6 {
+
+public class feature6Test {
 
 
   private List<Delivery> deliveries = new ArrayList<>();
