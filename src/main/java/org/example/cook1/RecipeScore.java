@@ -1,15 +1,15 @@
 package org.example.cook1;
 
 public class RecipeScore {
-    private AITest recipe;
+    private AI recipe;
     private int score;
 
-    public RecipeScore(AITest recipe, int score) {
+    public RecipeScore(AI recipe, int score) {
         this.recipe = recipe;
         this.score = score;
     }
 
-    public AITest getRecipe() {
+    public AI getRecipe() {
         return recipe;
     }
 
