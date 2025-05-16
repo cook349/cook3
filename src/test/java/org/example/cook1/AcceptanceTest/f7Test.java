@@ -1,7 +1,7 @@
 package org.example.cook1.AcceptanceTest;
 
 import io.cucumber.java.en.*;
-import org.example.cook1.AI;
+import org.example.cook1.AITest;
 import org.example.cook1.RecipeScore;
 import org.example.cook1.RecipeUtils;
 
@@ -16,14 +16,14 @@ public class f7Test {
     private String recommendedRecipe;
     private String explanation;
 
-    private final List<AI> recipeDatabase = Arrays.asList(
-            new AI("Spaghetti with Tomato Sauce",
+    private final List<AITest> recipeDatabase = Arrays.asList(
+            new AITest("Spaghetti with Tomato Sauce",
                     new String[]{"Tomatoes", "pasta", "basil"},
                     new String[]{"olive oil"}, 25, true),
-            new AI("Tomato Basil Soup",
+            new AITest("Tomato Basil Soup",
                     new String[]{"Tomatoes", "basil"},
                     new String[]{"garlic"}, 40, true),
-            new AI("Vegan Pesto Pasta",
+            new AITest("Vegan Pesto Pasta",
                     new String[]{"basil", "pasta"},
                     new String[]{"olive oil", "garlic"}, 20, true)
     );
@@ -47,7 +47,7 @@ public class f7Test {
     public void theAIRecommendsARecipe() {
         List<RecipeScore> scoredRecipes = new ArrayList<>();
 
-        for (AI recipe : recipeDatabase) {
+        for (AITest recipe : recipeDatabase) {
             if (dietaryRestriction.equalsIgnoreCase("Vegan") && !recipe.isVegan()) {
                 continue;
             }
@@ -68,7 +68,7 @@ public class f7Test {
             this.explanation = "No recipes match all constraints";
         } else {
             scoredRecipes.sort(Comparator.comparingInt(RecipeScore::getScore).reversed());
-            AI bestMatch = scoredRecipes.get(0).getRecipe();
+            AITest bestMatch = scoredRecipes.get(0).getRecipe();
             this.recommendedRecipe = bestMatch.getName();
             this.explanation = RecipeUtils.buildExplanation(
                     bestMatch,

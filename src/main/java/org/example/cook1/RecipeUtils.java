@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RecipeUtils {
-    public static int calculateRecipeScore(AI recipe, List<String> availableIngredients) {
+    public static int calculateRecipeScore(AITest recipe, List<String> availableIngredients) {
         int score = 1000;
         long matchingOptional = recipe.getOptionalIngredients().stream()
                 .filter(availableIngredients::contains)
@@ -16,13 +16,13 @@ public class RecipeUtils {
         return score;
     }
 
-    public static boolean hasAllRequiredIngredients(AI recipe, List<String> availableIngredients) {
+    public static boolean hasAllRequiredIngredients(AITest recipe, List<String> availableIngredients) {
         return recipe.getRequiredIngredients().stream()
                 .allMatch(req -> availableIngredients.stream()
                         .anyMatch(avail -> avail.equalsIgnoreCase(req)));
     }
 
-    public static int countMatchingIngredients(AI recipe, List<String> availableIngredients) {
+    public static int countMatchingIngredients(AITest recipe, List<String> availableIngredients) {
         int count = 0;
         for (String ing : recipe.getRequiredIngredients()) {
             if (availableIngredients.contains(ing)) {
@@ -37,7 +37,7 @@ public class RecipeUtils {
         return count;
     }
 
-    public static String buildExplanation(AI recipe, List<String> availableIngredients, int maxCookingTime, String dietaryRestriction) {
+    public static String buildExplanation(AITest recipe, List<String> availableIngredients, int maxCookingTime, String dietaryRestriction) {
         List<String> missingOptional = recipe.getOptionalIngredients().stream()
                 .filter(opt -> !availableIngredients.contains(opt))
                 .collect(Collectors.toList());
