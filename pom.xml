@@ -135,16 +135,19 @@
 
 
             <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version>
-            <configuration>
-              <useModulePath>false</useModulePath>
-              <includes>
-                <include>**/acceptanceTest.java</include>
-              </includes>
-            </configuration>
-          </plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.0.0-M5</version>
+  <configuration>
+    <useModulePath>false</useModulePath>
+    <argLine>-Xmx1024m -Djava.awt.headless=true --add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+    <includes>
+      <include>**/acceptanceTest.java</include>
+    </includes>
+    <forkCount>1</forkCount>
+    <reuseForks>true</reuseForks>
+  </configuration>
+</plugin>
 
 
 
