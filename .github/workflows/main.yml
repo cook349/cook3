@@ -33,5 +33,5 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B clean verify org.jacoco:jacoco-maven-plugin:0.8.10:report org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=cook349_cook3 -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+        run: mvn -B clean verify org.jacoco:jacoco-maven-plugin:0.8.10:prepare-agent install org.jacoco:jacoco-maven-plugin:0.8.10:report org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=cook349_cook3 -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml -Dsonar.token=${{ secrets.SONAR_TOKEN }}
  
