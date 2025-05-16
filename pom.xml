@@ -132,6 +132,8 @@
                     <useModulePath>false</useModulePath>
                     <includes>
                       <include>**/*Test.java</include>
+                      <include>**/acceptanceTest.java</include>
+
                     </includes>
                 </configuration>
             </plugin>
