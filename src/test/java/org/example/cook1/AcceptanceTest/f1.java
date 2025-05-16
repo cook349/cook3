@@ -9,7 +9,7 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-public class f1Test {
+public class f1 {
 
 
     private customer customer;

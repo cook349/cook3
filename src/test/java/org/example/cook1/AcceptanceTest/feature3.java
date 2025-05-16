@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class feature3Test {
+public class feature3 {
   private List<Chef> chefs = new ArrayList<>();
   private CookingTask currentTask;
   private Chef assignedChef;

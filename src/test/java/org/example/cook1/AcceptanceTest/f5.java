@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 import static org.junit.Assert.*;
 
 
-public class f5Test {
+public class f5 {
     private String customerName;
     private String orderReference;
     private double orderAmount;
@@ -33,7 +33,7 @@ public class f5Test {
 
 
 
-    public f5Test() {
+    public f5() {
         Map<String, String> q1Data = new HashMap<>();
         q1Data.put("Revenue Total", "24500.00");
         q1Data.put("Orders Processed", "350");
