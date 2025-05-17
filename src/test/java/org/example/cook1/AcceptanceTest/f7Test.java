@@ -8,7 +8,7 @@ import org.example.cook1.RecipeUtils;
 import java.util.*;
 import static org.junit.Assert.*;
 
-public class f7 {
+public class f7Test {
 
     private String dietaryRestriction;
     private List<String> availableIngredients;

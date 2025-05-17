@@ -7,7 +7,7 @@ import org.example.cook1.test2;
 import static org.junit.Assert.*;
 import java.util.*;
 
-public class f2 {
+public class f2Test {
     private String customerName;
     private String dietaryRestriction;
     private List<String> selectedIngredients;
