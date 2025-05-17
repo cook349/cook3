@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         glue = {"org.example.cook1.AcceptanceTest"},
         publish = true)
 
-public class acceptanceTest {
+public class AcceptanceTest {
 
 
 }
